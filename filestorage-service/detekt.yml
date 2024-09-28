@@ -1,0 +1,39 @@
+style:
+  NewLineAtEndOfFile:
+    active: false
+  ReturnCount:
+    max: 4
+  ThrowsCount:
+    max: 4
+  FunctionOnlyReturningConstant:
+    active: false
+
+complexity:
+  LongParameterList:
+    functionThreshold: 12
+    constructorThreshold: 20
+    ignoreDefaultParameters: true
+  TooManyFunctions:
+    thresholdInClasses: 20
+  LongMethod:
+    threshold: 100
+
+formatting:
+  FinalNewline:
+    active: false
+  ImportOrdering:
+    active: false
+  Wrapping:
+    active: false
+  NoEmptyFirstLineInMethodBlock:
+    active: false
+  NoBlankLineBeforeRbrace:
+    active: false
+
+performance:
+  SpreadOperator:
+    active: false
+
+exceptions:
+  TooGenericExceptionCaught:
+    active: false
