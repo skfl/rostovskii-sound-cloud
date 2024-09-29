@@ -1,6 +1,11 @@
 spring:
-  main:
-    banner-mode: off
+  data:
+  datasource:
+    fs:
+      driver-class-name: org.postgresql.Driver
+      username: filestorage
+      password: filestorage
+      url: jdbc:postgresql://127.0.0.1:55321/filestorage
 management:
   endpoints:
     web:

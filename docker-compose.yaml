@@ -18,6 +18,14 @@ services:
     networks:
       - app-tier
 
+  filestorage-db:
+    image: postgres:13.13-alpine3.19
+    environment:
+      - POSTGRES_DB=filestorage
+      - POSTGRES_USER=filestorage
+      - POSTGRES_PASSWORD=filestorage
+    ports:
+      - "55321:5432"
 
 networks:
   app-tier:

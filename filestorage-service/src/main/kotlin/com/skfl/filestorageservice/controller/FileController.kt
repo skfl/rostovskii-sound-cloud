@@ -5,5 +5,5 @@ import org.springframework.web.multipart.MultipartFile
 
 interface FileController {
 
-    fun upload(multipartFile: MultipartFile) : FileUploadResponse
+    fun upload(multipartFile: MultipartFile): FileUploadResponse
 }

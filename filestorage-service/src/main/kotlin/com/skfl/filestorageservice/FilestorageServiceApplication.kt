@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class FilestorageServiceApplication
 
 fun main(args: Array<String>) {
-	runApplication<FilestorageServiceApplication>(*args)
+    runApplication<FilestorageServiceApplication>(*args)
 }
