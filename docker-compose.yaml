@@ -25,7 +25,7 @@ services:
       - POSTGRES_USER=filestorage
       - POSTGRES_PASSWORD=filestorage
     ports:
-      - "55321:5432"
+      - "4441:5432"
 
 networks:
   app-tier:

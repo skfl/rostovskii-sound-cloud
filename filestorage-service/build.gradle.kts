@@ -1,5 +1,6 @@
 import org.flywaydb.core.Flyway
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.jooq.codegen.GenerationTool
 import org.jooq.meta.jaxb.Configuration
 import org.jooq.meta.jaxb.Database
@@ -73,7 +74,7 @@ tasks.register("jooqGenerate") {
 
     doLast {
         val driverClassName = "org.postgresql.Driver"
-        val filesJdbcUrl = "jdbc:postgresql://127.0.0.1:55321/filestorage"
+        val filesJdbcUrl = "jdbc:postgresql://127.0.0.1:4441/filestorage"
         val filesUsername = "filestorage"
         val filesPassword = "filestorage"
         val filesIncludes = listOf("files")
@@ -140,11 +141,12 @@ fun runJooq(
 }
 
 
-kotlin {
-    compilerOptions {
-        freeCompilerArgs.addAll("-Xjsr305=strict")
-        jvmTarget.set(JvmTarget.JVM_17)
+tasks.withType<KotlinCompile> {
+    kotlinOptions {
+        freeCompilerArgs += "-Xjsr305=strict"
+        jvmTarget = "17"
     }
+    dependsOn("jooqGenerate")
 }
 
 tasks.withType<Test> {
