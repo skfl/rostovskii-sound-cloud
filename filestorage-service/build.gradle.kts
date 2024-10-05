@@ -51,6 +51,8 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
 
+    implementation("io.minio:minio:8.5.12")
+
     implementation("org.springframework.boot:spring-boot-starter-jooq")
     implementation("org.jooq:jooq-jackson-extensions:3.19.7")
     implementation("org.jooq:jooq-postgres-extensions:3.19.9")
