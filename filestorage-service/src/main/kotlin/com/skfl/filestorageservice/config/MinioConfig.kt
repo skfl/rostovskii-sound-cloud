@@ -41,13 +41,6 @@ class MinioConfig(
             .credentials(minioUsername, minioPassword)
             .build()
         createDefaultBucket(client)
-        if (client.listObjects(
-                ListObjectsArgs.builder()
-                    .bucket(bucketName)
-                    .build()
-            ).iterator().hasNext()
-        ) {
-        }
         return client
     }
 
